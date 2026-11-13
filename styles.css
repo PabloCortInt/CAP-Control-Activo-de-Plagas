@@ -1,0 +1,620 @@
+/* =================================
+   1. CONFIGURACIÓN GENERAL
+================================= */
+
+:root {
+    --rojo: #C8101E;
+    --rojo-oscuro: #A30D18;
+    --negro: #171717;
+    --gris: #F4F4F5;
+    --blanco: #FFFFFF;
+    --texto: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+
+/* =================================
+   2. ENCABEZADO
+================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 15px 50px;
+    background-color: var(--blanco);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    border-bottom: 1px solid #EEEEEE;
+}
+
+
+/* LOGOTIPO */
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =================================
+   3. MENÚ DE NAVEGACIÓN
+================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--rojo);
+}
+
+
+/* =================================
+   4. SECCIÓN PRINCIPAL - INICIO
+================================= */
+
+
+/* =================================
+   PORTADA - DISEÑO DE DOS COLUMNAS
+================================= */
+
+#inicio {
+    min-height: 520px;
+    padding: 80px 8%;
+
+    background: linear-gradient(
+        120deg,
+        #F4F4F5 0%,
+        #FFFFFF 65%,
+        #FCEEEF 100%
+    );
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+    gap: 50px;
+
+    border-bottom: 4px solid var(--rojo);
+}
+
+/* COLUMNA IZQUIERDA */
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    color: var(--texto);
+    max-width: 500px;
+}
+
+/* COLUMNA DERECHA */
+
+.hero-visual {
+    width: 100%;
+}
+
+.visual-placeholder {
+    min-height: 330px;
+
+    background: linear-gradient(
+        135deg,
+        #EEEEF0,
+        #FFFFFF
+    );
+
+    border: 2px dashed #D0D0D3;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 25px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-icon {
+    font-size: 45px;
+    color: var(--rojo);
+    margin-bottom: 10px;
+}
+
+.visual-placeholder h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.visual-placeholder p {
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.visual-label {
+    position: absolute;
+    bottom: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--rojo);
+}
+
+/* =================================
+   5. SERVICIOS
+================================= */
+
+#servicios {
+    padding: 90px 8%;
+    background-color: var(--blanco);
+}
+
+#servicios h2,
+#nosotros h2,
+#contacto h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+#servicios > p {
+    color: var(--texto);
+}
+
+
+/* =================================
+   6. NOSOTROS
+================================= */
+
+#nosotros {
+    padding: 90px 8%;
+    background-color: var(--gris);
+}
+
+#nosotros p {
+    color: var(--texto);
+    max-width: 650px;
+}
+
+
+/* =================================
+   7. CONTACTO
+================================= */
+
+#contacto {
+    padding: 90px 8%;
+    background-color: var(--blanco);
+}
+
+#contacto p {
+    color: var(--texto);
+}
+
+
+/* =================================
+   8. PIE DE PÁGINA
+================================= */
+
+footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 25px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =================================
+   9. DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+
+#inicio {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    min-height: auto;
+    padding: 60px 7%;
+}
+
+.hero-content h1 {
+    font-size: 34px;
+}
+
+.hero-content p {
+    font-size: 15px;
+}
+
+.visual-placeholder {
+    min-height: 250px;
+}
+
+
+    #servicios,
+    #nosotros,
+    #contacto {
+        padding: 60px 7%;
+    }
+
+    #servicios h2,
+    #nosotros h2,
+    #contacto h2 {
+        font-size: 28px;
+    }
+}
+
+/* BOTÓN PRINCIPAL */
+
+.boton-principal {
+    display: inline-block;
+    width: fit-content;
+
+    margin-top: 30px;
+    padding: 15px 28px;
+
+    background-color: var(--rojo);
+    color: var(--blanco);
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: var(--rojo-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(200, 16, 30, 0.2);
+}
+
+
+/* =================================
+   CATÁLOGO DE SERVICIOS
+================================= */
+
+#servicios {
+    padding: 90px 8%;
+    background-color: var(--blanco);
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-label {
+    color: var(--rojo);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.services-heading h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.services-heading p {
+    color: var(--texto);
+}
+
+/* PESTAÑAS */
+
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.service-tab {
+    padding: 14px 28px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    background-color: var(--gris);
+    color: var(--negro);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-tab:hover {
+    border-color: var(--rojo);
+    color: var(--rojo);
+}
+
+.service-tab.active {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border-color: var(--rojo);
+}
+
+/* CONTENIDO DEL SERVICIO */
+
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--gris);
+    border-radius: 12px;
+}
+
+/* ESPACIO PARA FOTOGRAFÍA */
+
+.service-image {
+    width: 100%;
+}
+
+.image-placeholder {
+    min-height: 280px;
+    background-color: #E8E8EA;
+    border: 2px dashed #CCCCCC;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--texto);
+}
+
+.image-placeholder span {
+    font-size: 45px;
+    color: var(--rojo);
+}
+
+/* DESCRIPCIÓN */
+
+.service-number {
+    color: var(--rojo);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.service-description h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.service-description p {
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--rojo);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ADAPTACIÓN MÓVIL */
+
+@media (max-width: 768px) {
+
+    .service-tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .service-tab {
+        padding: 12px 16px;
+    }
+
+    .service-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .services-heading h2 {
+        font-size: 28px;
+    }
+
+    .service-description h3 {
+        font-size: 24px;
+    }
+}
+
+
+
+/* =================================
+   GALERÍA DESLIZABLE C.A.P.
+================================= */
+
+.service-gallery {
+    margin-top: 65px;
+}
+
+/* ENCABEZADO DE GALERÍA */
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.gallery-heading h3 {
+    font-size: 26px;
+    margin-top: 8px;
+}
+
+/* BOTONES DE NAVEGACIÓN */
+
+.gallery-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-controls button {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--rojo);
+    border-radius: 50%;
+
+    background-color: var(--blanco);
+    color: var(--rojo);
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.gallery-controls button:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+/* CONTENEDOR HORIZONTAL */
+
+.gallery-track {
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* TARJETAS */
+
+.gallery-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+    scroll-snap-align: start;
+}
+
+.gallery-placeholder {
+    height: 230px;
+
+    background: linear-gradient(
+        135deg,
+        #EEEEF0,
+        #F9F9F9
+    );
+
+    border: 1px dashed #CCCCCC;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--texto);
+}
+
+.gallery-placeholder span {
+    font-size: 35px;
+    color: var(--rojo);
+}
+
+.gallery-placeholder p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .gallery-item {
+        flex: 0 0 80%;
+    }
+
+    .gallery-heading h3 {
+        font-size: 21px;
+    }
+
+    .gallery-placeholder {
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .gallery-heading {
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .gallery-controls button {
+        width: 36px;
+        height: 36px;
+    }
+
+}

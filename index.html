@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C.A.P. | Control Activo de Plagas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">
+            <img src="assets/logo-cap.png" alt="C.A.P. Control Activo de Plagas">
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- INICIO -->
+
+<!-- SECCIÓN PRINCIPAL - INICIO -->
+<section id="inicio">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="hero-content">
+
+        <h1>Control Activo de Plagas</h1>
+
+        <p>
+            Protegemos tus espacios y cuidamos
+            tu tranquilidad.
+        </p>
+
+        <a href="#servicios" class="boton-principal">
+            Conoce nuestros servicios →
+        </a>
+
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="hero-visual">
+
+        <div class="visual-placeholder">
+
+            <span class="visual-icon">＋</span>
+
+            <h3>Espacio protegido</h3>
+
+            <p>
+                Próximamente fotografías
+                de nuestros servicios.
+            </p>
+
+            <span class="visual-label">
+                C.A.P. | CONTROL ACTIVO DE PLAGAS
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- SERVICIOS -->
+        
+<!-- SECCIÓN DE SERVICIOS -->
+<section id="servicios">
+
+    <div class="services-heading">
+        <span class="section-label">
+            CONTROL ACTIVO DE PLAGAS
+        </span>
+
+        <h2>Nuestros servicios</h2>
+
+        <p>
+            Conoce las soluciones que tenemos para ti.
+        </p>
+    </div>
+
+    <!-- PESTAÑAS -->
+    <div class="service-tabs" role="tablist">
+
+        <button class="service-tab active"
+                role="tab"
+                id="tab-1"
+                aria-selected="true"
+                aria-controls="service-panel"
+                data-service="0">
+            Servicio 01
+        </button>
+
+        <button class="service-tab"
+                role="tab"
+                id="tab-2"
+                aria-selected="false"
+                aria-controls="service-panel"
+                data-service="1">
+            Servicio 02
+        </button>
+
+        <button class="service-tab"
+                role="tab"
+                id="tab-3"
+                aria-selected="false"
+                aria-controls="service-panel"
+                data-service="2">
+            Servicio 03
+        </button>
+
+    </div>
+
+    <!-- CONTENIDO DINÁMICO -->
+    <div class="service-content"
+         id="service-panel"
+         role="tabpanel"
+         aria-labelledby="tab-1">
+
+        <div class="service-image">
+
+            <div class="image-placeholder">
+                <span>＋</span>
+                <p>Fotografía del servicio</p>
+            </div>
+
+        </div>
+
+        <div class="service-description">
+
+            <span class="service-number" id="service-number">
+                SERVICIO 01
+            </span>
+
+            <h3 id="service-title">
+                Nombre del servicio
+            </h3>
+
+            <p id="service-text">
+                Aquí colocaremos la descripción del
+                servicio proporcionada por el cliente.
+            </p>
+
+            <a href="#contacto" class="service-link">
+                Solicitar información →
+            </a>
+
+        </div>
+
+    </div>
+
+
+<!-- GALERÍA DE FOTOGRAFÍAS -->
+<div class="service-gallery">
+
+    <div class="gallery-heading">
+        <div>
+            <span class="section-label">
+                GALERÍA C.A.P.
+            </span>
+
+            <h3>Conoce nuestros trabajos</h3>
+        </div>
+
+        <div class="gallery-controls">
+
+            <button id="gallery-prev"
+                    aria-label="Fotografías anteriores">
+                &#8592;
+            </button>
+
+            <button id="gallery-next"
+                    aria-label="Fotografías siguientes">
+                &#8594;
+            </button>
+
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DESLIZABLE -->
+    <div class="gallery-track" id="gallery-track">
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">
+                <span>＋</span>
+                <p>Fotografía 01</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">
+                <span>＋</span>
+                <p>Fotografía 02</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">
+                <span>＋</span>
+                <p>Fotografía 03</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">
+                <span>＋</span>
+                <p>Fotografía 04</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">
+                <span>＋</span>
+                <p>Fotografía 05</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+        <!-- NOSOTROS -->
+        <section id="nosotros">
+            <h2>¿Quiénes somos?</h2>
+            <p>Conoce más acerca de C.A.P.</p>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Estamos para atenderte.</p>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 C.A.P. Control Activo de Plagas</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
