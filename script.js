@@ -45,6 +45,12 @@ const panel = document.getElementById("service-panel");
 
 function mostrarServicio(indice) {
 
+        panel.classList.remove("is-changing");
+
+    void panel.offsetWidth;
+
+    panel.classList.add("is-changing");
+
     const servicio = servicios[indice];
 
     // Actualizar información
