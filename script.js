@@ -147,3 +147,46 @@ galleryPrev.addEventListener("click", () => {
     });
 
 });
+
+
+// Navegación sin conservar el ancla en la URL
+document.querySelectorAll('header a[href^="#"]').forEach(enlace => {
+    enlace.addEventListener("click", function(event) {
+        const destino = document.querySelector(this.getAttribute("href"));
+
+        if (destino) {
+            event.preventDefault();
+
+            destino.scrollIntoView({
+                behavior: "smooth"
+            });
+
+            history.replaceState(
+                null,
+                "",
+                window.location.pathname + window.location.search
+            );
+        }
+    });
+});
+
+// BOTÓN PARA VOLVER AL INICIO
+
+const btnSubir = document.getElementById("btn-subir");
+
+// Mostrar la flecha al bajar
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        btnSubir.classList.add("visible");
+    } else {
+        btnSubir.classList.remove("visible");
+    }
+});
+
+// Regresar suavemente al inicio
+btnSubir.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
